@@ -1,0 +1,26 @@
+.cart-wrap{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    background-color: greenyellow;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    width: 40%;
+}
+.cart-wrap .cart-wrap-title{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-wrap .cart-wrap-content .cart-wrap-content-1{
+    margin: 1rem 0;
+    align-items: center;
+}
+.cart-wrap .cart-wrap-content .cart-wrap-content-1 .cart-wrap-content-img{
+    margin-right: 2rem;
+    
+}
+.cart-wrap .cart-wrap-content .cart-wrap-content-1 .cart-wrap-content-info input{
+    width: 50px;
+}

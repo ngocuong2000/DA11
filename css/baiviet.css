@@ -1,0 +1,7 @@
+.content{
+    background: url(../Pictures/background.jpg) no-repeat;
+    background-size: cover;
+}
+.content .content-left h3{
+    color: #899a29;
+}

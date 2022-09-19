@@ -1,0 +1,459 @@
+/* @font-face {
+    font-family: SVNAthene;
+    src: url(../fonts/SVN-Athene.otf);
+}
+@font-face {
+    font-family: SVNArtfulBeauty;
+    src: url(../fonts/SVN-Artful\ Beauty.ttf);
+} */
+
+:root {
+    --primaryGreen: #aabc44;
+}
+
+* {
+    font-family: SVNAthene;
+    letter-spacing: 2px;
+}
+
+a, a:hover {
+    text-decoration: unset;
+    color: unset;
+}
+
+ul {
+    padding: 0;
+}
+
+.btn {
+    background-color: var(--primaryGreen);
+    padding: .5rem 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #50802f;
+    color: #fff;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-primary-green {
+    color: var(--primaryGreen);
+}
+
+.text-sm {
+    font-size: .85rem;
+}
+
+.tea-bg {
+    background: url(../img/chitietsanpham/background.jpg) center/cover no-repeat;
+}
+
+/* Header */
+.navbar-expand-lg .navbar-nav .nav-link {
+    text-transform: uppercase;
+    padding: 0 1.5rem;
+    color: #000;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: #aaa;
+    cursor: pointer;
+}
+
+.navbar-toggler {
+    order: 1;
+}
+
+#navbarNav {
+    order: 2;
+}
+
+.nav-link {
+    font-size: .85rem;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators li {
+    width: 25px;
+    height: 25px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.2.0 by %40fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons  Inc. --%3E%3Cpath d='M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z'/%3E%3C/svg%3E");
+    filter: invert(77%) sepia(5%) saturate(5028%) hue-rotate(27deg) brightness(94%) contrast(90%);
+    background-color: transparent;
+}
+
+.carousel-indicators .active {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M160 256C160 202.1 202.1 160 256 160C309 160 352 202.1 352 256C352 309 309 352 256 352C202.1 352 160 309 160 256zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z'/%3E%3C/svg%3E");
+    filter: invert(77%) sepia(5%) saturate(5028%) hue-rotate(27deg) brightness(94%) contrast(90%);
+    background-color: transparent;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-caption {
+    text-align: left;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.carousel-caption h2 {
+    color: #43782b;
+    font-family: SVNArtfulBeauty;
+    font-size: 7rem;
+}
+
+/* Trang chu */
+.products {
+    margin-top: 140px;
+    position: relative;
+}
+
+.slick-prev, .slick-next {
+    font-size: 2rem;
+    color: var(--primaryGreen);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    color: #50802f;
+}
+
+.arrow, .item {
+    cursor: pointer;
+}
+
+.slick-img {
+    width: 200px;
+}
+
+.item p {
+    font-size: .8rem;
+    margin-top: 16px;
+}
+
+.slick-slide img {
+    display: unset;
+}
+
+.leaf {
+    top: -100px;
+    right: 120px;
+}
+
+.lotus {
+    width: 150px;
+    bottom: -200px;
+}
+
+.about {
+    padding-top: 56%;
+    background: url(../img/trang-chu/gioithieu.png) top center/contain no-repeat;
+}
+
+.about h3 {
+    top: 25%;
+}
+
+.item-about {
+    top: 50%;
+    transform: translateY(-25%);
+}
+
+.item-about h3 {
+    color: #43782b;
+    font-family: SVNArtfulBeauty;
+    font-size: 6.75rem;
+}
+
+.item-about p {
+    font-size: .75rem;
+    top: 85px;
+    width: 500px;
+}
+
+.phone {
+    top: 20%;;
+    right: 0;
+}
+
+.phone a {
+    color: #aabc44;
+    top: 30%;
+    right: 24%;
+    cursor: pointer;
+}
+
+.tea-pot {
+    top: 0;
+    height: 550px;
+}
+
+.artist-name {
+    font-size: .9rem;
+}
+
+.artist-desc {
+    font-size: .65rem;
+}
+
+.buy-now {
+    padding-top: 200px;
+}
+
+.buy-now-banner {
+    top: 0;
+    right: 0;
+    width: 90%;
+    z-index: 0;
+}
+
+.buy-info {
+    z-index: 1;
+    position: absolute;
+}
+
+.buy-input {
+    border: 2px solid var(--primaryGreen);
+    border-radius: 4px;
+    padding: .45rem;
+    width: 500px;
+}
+
+/* Footer */
+.footer {
+    background-color: #f1f1e7;
+    margin-top: 150px;
+}
+
+.footer-img {
+    bottom: 0;
+    right: 0;
+}
+
+.footer-item {
+    list-style: none;
+}
+
+.footer-item li {
+    font-size: .75rem;
+}
+
+.footer-item a {
+    color: #000;
+}
+
+.footer-item a:hover {
+    color: #a8a89e;
+}
+
+.footer-item i {
+    font-size: 1.5rem;
+}
+
+.footer-item i:hover {
+    color: #a8a89e;
+}
+
+.copyright {
+    font-size: .75rem;
+}
+
+/* Gioi thieu */
+.content-item{
+    margin-top: 8rem;
+}
+.content-product-head {
+    background: url(../img/gioi-thieu/banner.jpg) top center/cover no-repeat;
+    height: 75vh;
+}
+
+.content-head-text h2 {
+    font-family: SVNArtfulBeauty;
+    font-size: 6rem;
+    color: #43782b;
+}
+
+.content-product-body {
+    background: url(../img/gioi-thieu/banner2.jpg) center/contain no-repeat;
+}
+
+/* San pham */
+.content-item-banner h2 {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ui-slider {
+    height: 4px;
+    background-color: #bcbcbc;
+}
+
+.ui-slider .ui-slider-handle {
+    width: .75rem;
+    height: .75rem;
+    border: none;
+    outline: none;
+    background-color: #898989;
+    top: -4px;
+    margin-left: 0;
+}
+
+.ui-widget-header {
+    background-color: #898989;
+}
+
+#amount {
+    outline: none;
+    font-size: .85rem;
+}
+
+.option {
+    color: #898989;
+    font-size: .85rem;
+}
+
+.item-card:hover {
+    background-color: rgba(80,128,47,0.25);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.rating {
+    font-size: .65rem;
+    color: #69922b;
+}
+
+.new {
+    background-color: #d4f59b;
+    top: 4px;
+    right: 4px;
+    font-size: .65rem;
+    padding: .25rem .5rem;
+    border-radius: 6px;
+}
+
+.item-picture {
+    width: 100%;
+}
+
+.page-link {
+    border: 1px solid #c4c4c4;
+    color: #022222;
+    font-size: .65rem;
+}
+
+.page-link:hover {
+    color: #022222;
+}
+
+.page-item.page-item-active .page-link {
+    border: 1px solid var(--primaryGreen);
+    color: var(--primaryGreen);
+}
+
+/* Chi tiet san pham */
+.slider-for {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-for-img {
+    width: 400px;
+}
+
+.line {
+    font-size: .85rem;
+}
+
+.line i {
+    color: var(--primaryGreen);
+    font-size: 1rem;
+    width: 1.75rem;
+}
+
+/* Tin tuc */
+.news-head {
+    color: var(--primaryGreen);
+    font-size: 1rem;
+}
+
+.news-item-img {
+    width: 100px;
+    height: 100px;
+}
+
+.news-item-link:hover, .news-item:hover, .cart-item:hover {
+    background-color: rgba(80,128,47,0.25);
+    border-radius: 4px;
+    transition: all .3s ease;
+}
+
+/* Lien he */
+.content-contact {
+    background: url(../img/lien-he/banner.jpg) top center/cover no-repeat;
+    height: 80vh;
+}
+
+#contact {
+    margin-top: 150px;
+}
+
+.form-control {
+    height: unset;
+    border-color: var(--primaryGreen)
+}
+
+.form-control:focus {
+    border-color: #50802f;
+    box-shadow: 0 0 0 .2rem rgba(80,128,47,0.25);
+}
+
+/* Gio hang */
+.cart-wrap{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    background-color: greenyellow;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    width: 30%;
+}
+.cart-wrap .cart-wrap-title{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-wrap .cart-wrap-content .cart-wrap-content-1{
+    margin: 1rem 0;
+    align-items: center;
+}
+.cart-wrap .cart-wrap-content .cart-wrap-content-1 .cart-wrap-content-img{
+    margin-right: 2rem;
+    
+}
+.cart-wrap .cart-wrap-content .cart-wrap-content-1 .cart-wrap-content-info input{
+    width: 50px;
+}
+
+
+
+
