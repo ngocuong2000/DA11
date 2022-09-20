@@ -328,14 +328,18 @@ ul {
     color: #898989;
     font-size: .85rem;
 }
-
+.item-card{
+    text-align: center;
+}
 .item-card:hover {
     background-color: rgba(80,128,47,0.25);
     border-radius: 6px;
     cursor: pointer;
     transition: all .3s ease;
 }
-
+.btn-product{
+    margin-top: 1rem;
+}
 .rating {
     font-size: .65rem;
     color: #69922b;

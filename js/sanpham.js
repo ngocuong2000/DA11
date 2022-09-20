@@ -134,7 +134,7 @@ function deleteProduct(e) {
 
 
 function deleteAll() {
-    // allproduct = []
+    allproduct = []
     sessionStorage.setItem("allproduct", JSON.stringify([]))
     allcoast = 0
 
