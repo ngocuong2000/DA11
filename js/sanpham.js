@@ -10,11 +10,11 @@ $('.cart-close').click(function () {
     });
 });
 
-const allproduct = []
+let allproduct = []
 const btns = $('.btn-product')
 const parent_btns = $('.main__list-outside')
 const span_quantity = $('#quantity').attr('num')
-console.log(span_quantity);
+// console.log(span_quantity);
 var allcoast = 0
 
 $('.btn-product').click(function () {
