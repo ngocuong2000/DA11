@@ -50,8 +50,11 @@ $('.btn-product').click(function () {
     showProduct()
     totalproduct()
     addQuantity()
+
 });
 
+// var quantity_input = document.getElementsByClassName('.price');
+// console.log(quantity_input);
 
 // for (let i = 0; i < btns.length; i++) {
 //     $(btns[i]).click(()=>{
@@ -92,6 +95,8 @@ function totalproduct() {
 }
 
 function showProduct() {
+    // var name = $(this).siblings().children('.item-name').text()
+
     var allproduct = JSON.parse(sessionStorage.getItem("allproduct"))
     if (allproduct) {
         var show = document.querySelector('.cart-wrap .cart-wrap-content')
@@ -107,8 +112,11 @@ function showProduct() {
                     <div class="cart-wrap-content-info">
                         <h3>${allproduct[i][1]}</h3>
                         <p class="price" data-value="2000">Đơn giá: ${allproduct[i][2]}</p>
+                        <button class="minus"><i class="fa-solid fa-minus"></i></button>
                         <input type="number" name="soLuong" id="soLuong" value="${allproduct[i][3]}" min="1">
-                        <p class="thanh-tien" data-value="2000">Thành tiền: ${allproduct[i][4]}</p>
+                        <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                        <span>Thành tiền: </span>
+                        <p class="thanh-tien" data-value="2000">${allproduct[i][4]}</p>
                     </div>
                     <button onclick="deleteProduct(this)" class="delete">xóa</button>
                 </div>
@@ -116,7 +124,42 @@ function showProduct() {
             }
         }
         show.innerHTML = t
+
     }
+    $('.minus').click(function () {
+        var name = $(this).siblings('h3').text()
+        var allproduct = JSON.parse(sessionStorage.getItem("allproduct"))
+
+        for (let j = 0; j < allproduct.length; j++) {
+            if (name === allproduct[j][1]) {
+                if (allproduct[j][3] > 1) {
+                    allproduct[j][3] -= 1
+                    $(this).siblings('#soLuong').val(allproduct[j][3])
+                    console.log(allproduct[j][3]);
+                    allproduct[j][4] = parseInt(allproduct[j][3] * allproduct[j][2])
+                    $(this).siblings('.thanh-tien').text(allproduct[j][4]);
+                    sessionStorage.setItem("allproduct", JSON.stringify(allproduct))
+                    break;
+                }
+
+            }
+        }
+    });
+    $('.plus').click(function () {
+        var name = $(this).siblings('h3').text()
+        var allproduct = JSON.parse(sessionStorage.getItem("allproduct"))
+        for (let j = 0; j < allproduct.length; j++) {
+            if (name === allproduct[j][1]) {
+                allproduct[j][3] += 1
+                $(this).siblings('#soLuong').val(allproduct[j][3])
+                console.log(allproduct[j][3]);
+                allproduct[j][4] = parseInt(allproduct[j][3] * allproduct[j][2])
+                $(this).siblings('.thanh-tien').text(allproduct[j][4]);
+                sessionStorage.setItem("allproduct", JSON.stringify(allproduct))
+                break;
+            }
+        }
+    });
 }
 
 function deleteProduct(e) {
@@ -148,7 +191,7 @@ function addQuantity() {
     // let q = 0
     // for (let i = 0; i < allproduct.length; i++) {
     //     q += allproduct[i][3]
-        
+
     // }
     // document.getElementById('quantity').innerText = q
 
