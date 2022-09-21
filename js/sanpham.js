@@ -31,6 +31,8 @@ $('.btn-product').click(function () {
     // console.log(infoProduct);
     allcoast += parseInt(total)
     var add = true
+    // allproduct = JSON.parse(sessionStorage.getItem("allproduct"))
+
     for (let i = 0; i < allproduct.length; i++) {
         if (name === allproduct[i][1]) {
             add = false
@@ -126,40 +128,40 @@ function showProduct() {
         show.innerHTML = t
 
     }
-    $('.minus').click(function () {
-        var name = $(this).siblings('h3').text()
-        var allproduct = JSON.parse(sessionStorage.getItem("allproduct"))
+    // $('.minus').click(function () {
+    //     var name = $(this).siblings('h3').text()
+    //     var allproduct = JSON.parse(sessionStorage.getItem("allproduct"))
 
-        for (let j = 0; j < allproduct.length; j++) {
-            if (name === allproduct[j][1]) {
-                if (allproduct[j][3] > 1) {
-                    allproduct[j][3] -= 1
-                    $(this).siblings('#soLuong').val(allproduct[j][3])
-                    console.log(allproduct[j][3]);
-                    allproduct[j][4] = parseInt(allproduct[j][3] * allproduct[j][2])
-                    $(this).siblings('.thanh-tien').text(allproduct[j][4]);
-                    sessionStorage.setItem("allproduct", JSON.stringify(allproduct))
-                    break;
-                }
+    //     for (let j = 0; j < allproduct.length; j++) {
+    //         if (name === allproduct[j][1]) {
+    //             if (allproduct[j][3] > 1) {
+    //                 allproduct[j][3] -= 1
+    //                 $(this).siblings('#soLuong').val(allproduct[j][3])
+    //                 console.log(allproduct[j][3]);
+    //                 allproduct[j][4] = parseInt(allproduct[j][3] * allproduct[j][2])
+    //                 $(this).siblings('.thanh-tien').text(allproduct[j][4]);
+    //                 sessionStorage.setItem("allproduct", JSON.stringify(allproduct))
+    //                 break;
+    //             }
 
-            }
-        }
-    });
-    $('.plus').click(function () {
-        var name = $(this).siblings('h3').text()
-        var allproduct = JSON.parse(sessionStorage.getItem("allproduct"))
-        for (let j = 0; j < allproduct.length; j++) {
-            if (name === allproduct[j][1]) {
-                allproduct[j][3] += 1
-                $(this).siblings('#soLuong').val(allproduct[j][3])
-                console.log(allproduct[j][3]);
-                allproduct[j][4] = parseInt(allproduct[j][3] * allproduct[j][2])
-                $(this).siblings('.thanh-tien').text(allproduct[j][4]);
-                sessionStorage.setItem("allproduct", JSON.stringify(allproduct))
-                break;
-            }
-        }
-    });
+    //         }
+    //     }
+    // });
+    // $('.plus').click(function () {
+    //     var name = $(this).siblings('h3').text()
+    //     var allproduct = JSON.parse(sessionStorage.getItem("allproduct"))
+    //     for (let j = 0; j < allproduct.length; j++) {
+    //         if (name === allproduct[j][1]) {
+    //             allproduct[j][3] += 1
+    //             $(this).siblings('#soLuong').val(allproduct[j][3])
+    //             console.log(allproduct[j][3]);
+    //             allproduct[j][4] = parseInt(allproduct[j][3] * allproduct[j][2])
+    //             $(this).siblings('.thanh-tien').text(allproduct[j][4]);
+    //             sessionStorage.setItem("allproduct", JSON.stringify(allproduct))
+    //             break;
+    //         }
+    //     }
+    // });
 }
 
 function deleteProduct(e) {
@@ -197,3 +199,41 @@ function addQuantity() {
 
     document.getElementById('quantity').innerText = allproduct.length
 }
+
+$('.minus').click(function () {
+    var name = $(this).siblings('h3').text()
+    var allproduct = JSON.parse(sessionStorage.getItem("allproduct"))
+
+    for (let j = 0; j < allproduct.length; j++) {
+        if (name === allproduct[j][1]) {
+            if (allproduct[j][3] > 1) {
+                allproduct[j][3] -= 1
+                $(this).siblings('#soLuong').val(allproduct[j][3])
+                console.log(allproduct[j][3]);
+                allproduct[j][4] = parseInt(allproduct[j][3] * allproduct[j][2])
+                $(this).siblings('.thanh-tien').text(allproduct[j][4]);
+                sessionStorage.setItem("allproduct", JSON.stringify(allproduct))
+                break;
+            }
+
+        }
+    }
+    showProduct();
+});
+
+$('.plus').click(function () {
+    var name = $(this).siblings('h3').text()
+    var allproduct = JSON.parse(sessionStorage.getItem("allproduct"))
+    for (let j = 0; j < allproduct.length; j++) {
+        if (name === allproduct[j][1]) {
+            allproduct[j][3] += 1
+            $(this).siblings('#soLuong').val(allproduct[j][3])
+            console.log(allproduct[j][3]);
+            allproduct[j][4] = parseInt(allproduct[j][3] * allproduct[j][2])
+            $(this).siblings('.thanh-tien').text(allproduct[j][4]);
+            sessionStorage.setItem("allproduct", JSON.stringify(allproduct))
+            break;
+        }
+    }
+    showProduct();
+});
