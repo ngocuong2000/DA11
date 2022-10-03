@@ -5,8 +5,8 @@ $(document).ready(function () {
         slidesToScroll: 3,
         vertical: true,
         verticalSwiping: true,
-        prevArrow: "<button type='button' class='slick-prev m-button'><i class='fa-solid fa-circle-chevron-up mobile-root-left'></i></button>",
-        nextArrow: "<button type='button' class='slick-next m-button'><i class='fa-solid fa-circle-chevron-down mobile-root-right'></i></button>",
+        prevArrow: "<button type='button' class='slick-prev'><i class='fa-solid fa-circle-chevron-up mobile-root-left'></i></button>",
+        nextArrow: "<button type='button' class='slick-next'><i class='fa-solid fa-circle-chevron-down mobile-root-right'></i></button>",
         responsive: [
             {
                 breakpoint: 600,
